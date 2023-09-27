@@ -2,8 +2,8 @@ const LOREM_STORY = "Lorem ipsum possimus dolor sit amet consectetur possimus ad
 
 console.log('%c hello world ', 'background: #222; color: #bada55');
 
-//1-Yazdığınız hikayenin uzunluğunu yazdırın.
-console.log("Hikayenin Uzunluğu: " + LOREM_STORY.length);
+//1-Lenght of LOREM_STORY
+console.log("Lenght of LOREM_STORY: " + LOREM_STORY.length);
 
 //2-Hikayenin toplam index sayısı kaçtır.
 console.log("Toplam Index Sayısı: " + ((LOREM_STORY.length) - 1));
