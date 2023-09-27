@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        .relative1{
+            position: relative;
+            height: 600px;
+            width: 600px;
+            background-color: bisque;
+        }
+        .absolute1{
+            position: absolute;
+            height: 150px;
+            width: 150px;
+            background-color: burlywood;
+            top: 10px;
+            right: 20px;
+        }
+        .absolute2{
+            position: absolute;
+            height: 100px;
+            width: 100px;
+            background-color: coral;
+            top: 10px;
+            right: 20px;
+        }
+        .fixed1{
+            position: fixed;
+            z-index: 1;
+            height: 70px;
+            width: 70px;
+            background-color: cornflowerblue;
+            bottom: 20px;
+            right: 20px;
+        }
+        .fixed2{
+            position: fixed;
+
+            height: 70px;
+            width: 70px;
+            background-color: deeppink;
+
+            bottom: 30px;
+            right: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="relative1">
+        Relative 1
+        <div class="absolute1">
+            Absolute 1
+            <div class="absolute2">
+                Absolute 2
+                <div class="fixed1">Fixed 1</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed2">Fixed 2</div>
+</body>
+</html>
