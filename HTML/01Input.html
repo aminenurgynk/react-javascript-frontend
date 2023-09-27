@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <legend>My Form</legend>
+        <form
+        onsubmit="alert('Form submit edildi.')"
+        action="javascript:alert('Form submit edildi.')"
+      >
+    <label>First Name :
+        <br />
+        <input type="text" name="text1" />
+    </label>
+    <br />
+    <label>Last Name :
+        <br />
+        <input type="text" name="text2" />
+    </label>
+    <br />
+    <label>Email :
+        <br />
+        <input type="email" name="email1" />
+    </label>
+    <br />
+    <label>Phone Number :
+        <br />
+        <input type="tel" name="tel1" placeholder="543-123-45-67"/>
+    </label>
+    <br />
+    <label>Password :
+        <br />
+        <input type="password" name="password1" />
+    </label>
+    <br />
+    <br />
+    <label
+          >Gender
+          <br />
+          <select name="select1">
+            <option value="value1">Female</option>
+            <option value="value2">Male</option>
+            <option value="value3">Other</option>
+          </select>
+    </label>
+    <br />
+    <br />
+    <label 
+    >Marital Status
+    <br />
+    <input type="radio" name="radio1" value="radio1" /> Single</label>
+    <input type="radio" name="radio2" value="radio2" /> Married</label>
+    <br />
+    <label>Birthday:
+        <br />
+        <input type="date" name="date1" />
+    </label>
+    <br />
+    <br />
+    <label>Birthday(Month and Year):
+        <br />
+        <input type="month" name="mount1">
+    </label>
+    <br />
+    <br />
+    <label>Week:
+        <br />
+        <input type="week" name="week1">
+    </label>
+    <br/>
+    <br />
+    <label>Time:
+        <br />
+        <input type="time" name="time1">
+    </label>
+    <br />
+    <br />
+    <label
+    >About:
+    <br />
+    <textarea name="textarea1" rows="5" cols="50"></textarea>
+    </label>
+    <br />
+    <br />
+    <label
+      >Which course?
+      <br />
+      <select name="select2" multiple size="5">
+        <option value="value1">HTML</option>
+        <option value="value2">CSS</option>
+        <option value="value3">JavaScript</option>
+        <option value="value3">React</option>
+        <option value="value3">C#</option>
+      </select>
+    </label>
+    <br />
+    <br />
+    <label
+    >Quantity(1-5):
+    <br />
+    <input type="number" name="number1" min="1" max="5" />
+    </label>
+    <br />
+    <br />
+    <label>Interval(0-50):
+    <br />
+    <input type="range" name="range1" min="0" max="50" />
+    <br />
+    <br />
+    </label>Course Type:
+    <br />
+    <label><input type="checkbox" name="checkbox1" /> Online</label>
+    <label><input type="checkbox" name="checkbox2" /> Hybrid</label>
+    <label><input type="checkbox" name="checkbox3" /> Video</label>
+    <br />
+    <br />
+    <label>Favorite Color:
+        <br />
+        <input type="color" name="color1">
+    </label>
+    <br />
+    <br />
+    <label>URL:
+        <br />
+        <input type="url" name="url1">
+    </label>
+    <br />
+    <br />
+    <label
+    >Select File:
+    <br />
+    <input type="file" name="file1" placeholder="Dosya Sec"/>
+    </label>
+    <br />
+    <br />
+    <input type="submit" value="Save" />
+    <br />
+    <br />
+    <button type="submit">Save</button>
+
+    <br><br>
+    <label>
+        <input type="reset" name="reset" style="background-color: red;">
+    </label>
+</form>
+</fieldset>
+
+</body>
+</html>
