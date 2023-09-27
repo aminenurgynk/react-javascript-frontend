@@ -1,2 +1,2 @@
 # react-javascript-frontend
-Frontend Education Projects from Bootcamp
+Frontend Projects from Bootcamp
