@@ -34,8 +34,6 @@ console.log(value2.toFixed(4));
 // 10-) Returns a string representing a number with a specified precision. ---> Math.trunc(x)
 console.log(Math.trunc(value2));
 
-
-
 // 1. `Math.abs(x)`:
 //    - Returns the absolute value of `x`.
 //    - The absolute value represents the positive value of a number. For example, `Math.abs(-5)` returns `5`.
@@ -45,10 +43,10 @@ console.log(Math.trunc(value2));
 // 3. `Math.floor(x)`:
 //    - Rounds `x` down to the nearest integer (floor).
 //    - For example, `Math.floor(4.8)` returns `4`.
-// 4. `Math.max(x, y, ...)`: 
+// 4. `Math.max(x, y, ...)`:
 //    - Returns the largest value among a specified set of numbers.
 //    - For example, `Math.max(2, 7, 1, 9)` returns `9`.
-// 5. `Math.min(x, y, ...)`: 
+// 5. `Math.min(x, y, ...)`:
 //    - Returns the smallest value among a specified set of numbers.
 //    - For example, `Math.min(2, 7, 1, 9)` returns `1`.
 // 6. `Math.sqrt(x)`:

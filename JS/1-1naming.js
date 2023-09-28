@@ -9,13 +9,11 @@ var hasOwner = true;
 // function
 // camelCase
 function getName(catName, ownerName) {
-  return  `${catName}: ${ownerName}`;
+  return `${catName}: ${ownerName}`;
 }
 
 const myCat = getName(catName, "Aminenur");
 console.log(myCat);
-
-
 
 // constant
 // UPPER_SNAKE_CASE

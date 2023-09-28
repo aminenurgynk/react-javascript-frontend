@@ -1,6 +1,3 @@
-
-
-
 // 1- myArray isimli bir dizi tanımlayın. 10 elemandan oluşsun ad soyad yaş true sevdiğiniz meyveler, sevdiğiniz yemekler
 
 // 2- adınızı değiştirin => Cem => Mert. Diziyi konsola yazdırın.

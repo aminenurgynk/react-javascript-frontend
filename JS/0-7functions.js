@@ -36,7 +36,7 @@ const primeNumber = function (number) {
 };
 console.log(primeNumber(91));
 
-// 5- Verilen bir dizi içindeki en büyük sayıyı bulan bir fonksiyon yazın. Bu yanlis 
+// 5- Verilen bir dizi içindeki en büyük sayıyı bulan bir fonksiyon yazın. Bu yanlis
 
 const myArray = [5, 1, 24, 8, 10, 67];
 const maxNumber = function (array) {
@@ -52,13 +52,13 @@ console.log(maxNumber(myArray));
 
 // 6- Verilen bir dizi içindeki sayıların toplamını hesaplayan bir fonksiyon yazın.
 
-const sumofArray = function(array){
-    let sum = 0;
-    for (let i = 0; i < array.lenght; i++){
-        sum += array[i]
-    }
-    return result
-}
+const sumofArray = function (array) {
+  let sum = 0;
+  for (let i = 0; i < array.lenght; i++) {
+    sum += array[i];
+  }
+  return result;
+};
 console.log(sumofArray(myArray));
 // 7-Yukarıdaki son iki fonksiyonu arrow function olarak yeniden yazın.
 

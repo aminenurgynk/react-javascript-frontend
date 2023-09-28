@@ -1,33 +1,29 @@
-
 function isPalindrome(word) {
-    // Kelimeyi küçük harfe çevirip boşlukları kaldırın
-    word = word.toLowerCase().replace(/\s/g, '');
-  
-    // Kelimeyi tersten çevirin
-    const reversedWord = word.split('').reverse().join('');
-  
-    // Kelime aslında bir palindrom mu kontrol edin
-    return word === reversedWord;
-  }
-  
-  // Palindrom bir kelime örneği
-  const kelime1 = "kayak";
-  console.log(kelime1 + " bir palindrom mu? " + isPalindrome(kelime1));
-  
-  // Palindrom olmayan bir kelime örneği
-  const kelime2 = "hello";
-  console.log(kelime2 + " bir palindrom mu? " + isPalindrome(kelime2));
+  // Kelimeyi küçük harfe çevirip boşlukları kaldırın
+  word = word.toLowerCase().replace(/\s/g, "");
 
+  // Kelimeyi tersten çevirin
+  const reversedWord = word.split("").reverse().join("");
 
-  //Hoca cozumu
-  const kelime = "kelime"
-  const tersKelime = kelime.split("").reverse().join("")
-  console.log(tersKelime);
-  if(kelime === tersKelime){
-    console.log()
-  }
-  
+  // Kelime aslında bir palindrom mu kontrol edin
+  return word === reversedWord;
+}
 
+// Palindrom bir kelime örneği
+const kelime1 = "kayak";
+console.log(kelime1 + " bir palindrom mu? " + isPalindrome(kelime1));
+
+// Palindrom olmayan bir kelime örneği
+const kelime2 = "hello";
+console.log(kelime2 + " bir palindrom mu? " + isPalindrome(kelime2));
+
+//Hoca cozumu
+const kelime = "kelime";
+const tersKelime = kelime.split("").reverse().join("");
+console.log(tersKelime);
+if (kelime === tersKelime) {
+  console.log();
+}
 
 // Bir kelimeyi tersine çevirerek farklı bir değişkene atayın. Orijinal kelimenin palindrom (tersine de aynı olan) olup olmadığını kontrol eden bir if else yapısı oluşturun. Örneğin, "kayak" kelimesi palindromdur, ancak "merhaba" palindrom değildir.
 //var palindromWord = prompt("Bir palindrom kontrolü için değer giriniz.");
@@ -49,17 +45,21 @@ if (turkVatandasiMi) {
   } else if (yas >= 18) {
     console.log("Oy kullanabilirsiniz.");
   } else {
-    console.log("18 yaşından küçük olduğunuz için oy kullanamazsınız veya aday olamazsınız.");
+    console.log(
+      "18 yaşından küçük olduğunuz için oy kullanamazsınız veya aday olamazsınız."
+    );
   }
 } else {
   if (yas >= 18) {
-    console.log("Türk vatandaşı olmadığınız için aday olamazsınız, ancak oy kullanabilirsiniz.");
+    console.log(
+      "Türk vatandaşı olmadığınız için aday olamazsınız, ancak oy kullanabilirsiniz."
+    );
   } else {
-    console.log("18 yaşından küçük olduğunuz için ne aday olabilirsiniz ne de oy kullanabilirsiniz.");
+    console.log(
+      "18 yaşından küçük olduğunuz için ne aday olabilirsiniz ne de oy kullanabilirsiniz."
+    );
   }
 }
-
-
 
 // Kullanıcıdan temsili bir oy verme ve aday olma durumlarını sorgulamak için yaş ve uyruk bilgisi alın. Aşağıdaki koşulları uygulayan bir if sorgusu yazın.
 // a- Türk vatandaşı ve 30 yaşından büyük ise aday olabilir.
@@ -67,7 +67,6 @@ if (turkVatandasiMi) {
 // c- Türk vatandaşı değilse ancak 18 yaşından büyük ise aday olamaz ama oy verebilir.
 
 /////////////////////////////////////////////////////////////
-
 
 // Kullanıcıdan ay ismini alın
 const ayIsmi = prompt("Bir ay ismi girin:").toLowerCase();
@@ -99,8 +98,6 @@ switch (ayIsmi) {
 }
 
 console.log(`${ayIsmi} ayı ${gunSayisi} gün sürer.`);
-
-
 
 // switch
 // Kullanıcıdan bir ay ismi alın ve girilen ayın kaç gün olduğunu konsola yazdırın. (Switch Case)
@@ -151,6 +148,4 @@ switch (marka) {
 
 console.log(`${marka} markasının ${renk} renkli aracı stokta ${stokDurumu}.`);
 
-
 // BMW, Mercedes ve Audi Markaları için farklı renk çeşitlerine göre stok durumunu kontrol eden iç içe bir switch yapısı oluşturun. yaratacağınız stokDurumu değişkenini stokta "Var" veya "Yok" olarak güncellesin.
-

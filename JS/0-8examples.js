@@ -67,13 +67,14 @@ console.log(reverseMethod);
 
 // 9- Verilen bir dizinin elemanlarını(elemanlar sayı olmalı) stringe çevirerek yeni bir dizi oluşturan bir map döngüsü oluşturun.
 
-const intToString = array.map((element) => { return element.toString()} )
- console.log(intToString);   
-
+const intToString = array.map((element) => {
+  return element.toString();
+});
+console.log(intToString);
 
 // 10- Verilen bir dizi içindeki stringleri ters çevirerek yeni bir dizi oluşturan bir map döngüsü oluşturun. Ancak, bu sefer reverse() yerine kendi ters çevirme algoritmanızı oluşturun.
 
-const tersCevrilmisDizi = array1.map(function(metin) {
+const tersCevrilmisDizi = array1.map(function (metin) {
   let tersMetin = "";
   for (let i = metin.length - 1; i >= 0; i--) {
     tersMetin += metin[i];
@@ -85,38 +86,54 @@ console.log(tersCevrilmisDizi);
 
 // ---------------filter-------------------
 // 11- Verilen bir dizi içerisindeki çift sayıları filtreleyen bir örnek yazın.
-const evenNumber = array.filter((element) => {return element % 2 === 0})
+const evenNumber = array.filter((element) => {
+  return element % 2 === 0;
+});
 console.log(evenNumber);
 
 // 12- Verilen bir dizi içerisindeki stringlerden belirli bir uzunluğa sahip olanları filtreleyen bir örnek yazın.
-const longWord = array1.filter((element) => {return element.length > 4})
-console.log(longWord)
+const longWord = array1.filter((element) => {
+  return element.length > 4;
+});
+console.log(longWord);
 // ---------------reduce-------------------
 // 13- Verilen bir dizi içerisindeki sayıların toplamını, her bir sayıya 2 ekleyerek hesaplayan bir örnek yazın.
-const sumOfNumber = array.reduce((x1, x2) => {return x1 + x2 +2}, 0 )
-console.log(sumOfNumber)
+const sumOfNumber = array.reduce((x1, x2) => {
+  return x1 + x2 + 2;
+}, 0);
+console.log(sumOfNumber);
 
 // ---------------find-------------------
 // 14- Verilen bir dizi içerisindeki ilk çift sayıyı döndüren bir örnek
-const firstEvenNumber = array.find((element) => {return element % 2 === 0;})
+const firstEvenNumber = array.find((element) => {
+  return element % 2 === 0;
+});
 console.log(firstEvenNumber);
- 
+
 // 15- Verilen bir dizi içerisindeki son çift sayıyı döndüren bir örnek
-const lastEvenNumber = array.reverse().find((element) => {return element % 2 === 0;})
-console.log(lastEvenNumber)
+const lastEvenNumber = array.reverse().find((element) => {
+  return element % 2 === 0;
+});
+console.log(lastEvenNumber);
 
 // ---------------some-------------------
 // 16- Verilen bir dizi içerisinde en az bir negatif sayı olup olmadığını kontrol eden bir örnek
 const array2 = [1, 2, -3, 4, -5, 6, 7, 8, 9, 10];
-const anyMinus = array2.some(function(element) {return element < 0;});
+const anyMinus = array2.some(function (element) {
+  return element < 0;
+});
 console.log(anyMinus);
 
 // ---------------every-------------------
 // 17- Verilen bir dizi içerisindeki tüm sayıların pozitif olduğunu kontrol eden bir örnek
-const allPositive = array2.every(function(element) {return element > 0;});
+const allPositive = array2.every(function (element) {
+  return element > 0;
+});
 console.log(allPositive);
 
 // ---------------sort-------------------
 // 18- Verilen bir dizi içerisindeki sayıları sıralayan bir örnek\
-array2.sort(function(a, b) {return a - b;});
-console.log(array2); 
+array2.sort(function (a, b) {
+  return a - b;
+});
+console.log(array2);

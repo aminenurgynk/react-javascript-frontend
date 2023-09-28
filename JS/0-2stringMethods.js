@@ -1,12 +1,13 @@
-const LOREM_STORY = "Lorem ipsum possimus dolor sit amet consectetur possimus adipisicing elit. Odit dolores accusantium, possimus inventore dolore quidem aut sapiente. Quibusdam possimus recusandae illum possimus incidunt possimus perferendis, pariatur unde velit earum possimus animi! Voluptatibus, possimus qui exercitationem.";
+const LOREM_STORY =
+  "Lorem ipsum possimus dolor sit amet consectetur possimus adipisicing elit. Odit dolores accusantium, possimus inventore dolore quidem aut sapiente. Quibusdam possimus recusandae illum possimus incidunt possimus perferendis, pariatur unde velit earum possimus animi! Voluptatibus, possimus qui exercitationem.";
 
-console.log('%c hello world ', 'background: #222; color: #bada55');
+console.log("%c hello world ", "background: #222; color: #bada55");
 
 //1-Lenght of LOREM_STORY
 console.log("Lenght of LOREM_STORY: " + LOREM_STORY.length);
 
 //2-Hikayenin toplam index sayısı kaçtır.
-console.log("Toplam Index Sayısı: " + ((LOREM_STORY.length) - 1));
+console.log("Toplam Index Sayısı: " + (LOREM_STORY.length - 1));
 
 //3-String içerisinde tekrar eden bir kelimenin ilkinin indexini ve sonuncusunun indexini sorgulayın.
 var word = "possimus";
@@ -25,10 +26,14 @@ console.log("15. Karakterden Sonrası (Yöntem 2): " + LOREM_STORY.slice(15));
 
 // 6- Son 5 karakteri yazdıralım (2 farklı yöntem)
 console.log("Son 5 Karakter (Yöntem 1): " + LOREM_STORY.slice(-5));
-console.log("Son 5 Karakter (Yöntem 2): " + LOREM_STORY.substring(LOREM_STORY.length - 5));
+console.log(
+  "Son 5 Karakter (Yöntem 2): " + LOREM_STORY.substring(LOREM_STORY.length - 5)
+);
 
 // 7- 11. karakterden sonra gelen 10 karakteri yazdıralım
-console.log("11. Karakterden Sonraki 10 Karakter: " + LOREM_STORY.slice(11, 21));
+console.log(
+  "11. Karakterden Sonraki 10 Karakter: " + LOREM_STORY.slice(11, 21)
+);
 
 // 8- Son 5 karakter hariç hikayeyi yazdıralım
 console.log("Son 5 Karakter Haricindeki Hikaye: " + LOREM_STORY.slice(0, -5));
@@ -36,15 +41,21 @@ console.log("Son 5 Karakter Haricindeki Hikaye: " + LOREM_STORY.slice(0, -5));
 // 9- Hikayeniz, seçeceğiniz bir kelimeyi içeriyor mu diye kontrol edin
 var arananKelime = "illum";
 var kelimeIceriyorMu = LOREM_STORY.includes(arananKelime);
-console.log("Hikaye, '" + arananKelime + "' kelimesini içeriyor mu? " + kelimeIceriyorMu);
+console.log(
+  "Hikaye, '" + arananKelime + "' kelimesini içeriyor mu? " + kelimeIceriyorMu
+);
 
 // 10- Hikayenizdeki tüm "i" karakterlerini "ı" ya çevirin
 var duzeltilmisHikaye = LOREM_STORY.replace(/i/g, "ı");
-console.log("Tüm 'i' karakterleri 'ı' ile değiştirilmiş hikaye: " + duzeltilmisHikaye);
+console.log(
+  "Tüm 'i' karakterleri 'ı' ile değiştirilmiş hikaye: " + duzeltilmisHikaye
+);
 
 // 11- Hikayenizdeki "a" karakterini "e" ye çevirin
 duzeltilmisHikaye = LOREM_STORY.replace(/a/g, "e");
-console.log("Tüm 'a' karakterleri 'e' ile değiştirilmiş hikaye: " + duzeltilmisHikaye);
+console.log(
+  "Tüm 'a' karakterleri 'e' ile değiştirilmiş hikaye: " + duzeltilmisHikaye
+);
 
 // 12- Bütün metni büyük harfe çevirin
 var buyukHarfHikaye = LOREM_STORY.toUpperCase();
@@ -77,7 +88,10 @@ var bosluksuzMetin = metin.trim();
 console.log(bosluksuzMetin);
 
 // 16- Çıktıyı uygun metotları kullanarak "BENİM Adım: İsim" yazacak hale getirin
-var duzeltilmisMetin = "BENİM Adım: " + kullaniciIsmi.toUpperCase().charAt(0) + kullaniciIsmi.slice(1).toLowerCase();
+var duzeltilmisMetin =
+  "BENİM Adım: " +
+  kullaniciIsmi.toUpperCase().charAt(0) +
+  kullaniciIsmi.slice(1).toLowerCase();
 console.log(duzeltilmisMetin);
 
 // 17- Ekrana tırnak içindeki mesajı ya da değişkendeki değeri yazdıran bir pop-up oluşturun
