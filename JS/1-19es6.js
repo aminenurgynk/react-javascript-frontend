@@ -1,4 +1,4 @@
-// 1. let ve const variable key'leri geldi.
+// 1. let and const variable key
 
 // 2. arrow functions
 const arrowFunction = (param1, param2) => {
@@ -7,10 +7,10 @@ const arrowFunction = (param1, param2) => {
 
 // 3. destructure
 
-// 4. spread operatörü
+// 4. spread operator (`...`)
 function func1(param1, param2, ...otherParams) {}
 
-// 5. nesne tabanlı programlama - OOP
+// 5. Object Oriented Programming - OOP
 class Car {
   constructor(color, model) {
     this.color = color;
@@ -22,7 +22,7 @@ class Car {
   }
 }
 
-const myCar = new Car("kırmızı", "Volvo");
+const myCar = new Car("red", "Volvo");
 myCar.getCarProperties();
 
 // Object.assign

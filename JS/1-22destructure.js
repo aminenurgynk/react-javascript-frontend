@@ -1,3 +1,5 @@
+// Destructure
+
 const arr1 = [1, 2, 3, 4, 5];
 // const a = arr1[0];
 // const b = arr1[1];

@@ -1,25 +1,25 @@
-let sinif = ["Ali", "Aysu", "Aminenur", "Gizem", "Orhun", "Osman", "Salih"];
+let class1 = ["Ali", "Aysu", "Aminenur", "Gizem", "Orhun", "Osman", "Salih"];
 const numbers = [49, 1, 52, 67, 33, 200, 120];
 
 // * FOREACH
-sinif.forEach((value, index, array) => {
+class1.forEach((value, index, array) => {
   // console.log(value);
   // console.log(index);
   // console.log(array);
 });
 
 // * MAP
-const yeniSinif = sinif.map((value, index, array) => {
-  return `${value} array'in ${index}. elemanıdır.`;
+const newClass = class1.map((value, index, array) => {
+  return `${value} is  ${index}th value of array.`;
 });
-// console.log(yeniSinif);
+// console.log(newClass);
 
 // * FILTER
 const filterCB = (value, index, array) => {
   return value.length >= 5;
 };
-const yeniSinif1 = sinif.filter(filterCB);
-// console.log(yeniSinif1);
+const newClass1 = class1.filter(filterCB);
+// console.log(newClass1);
 // const filteredNumbers = numbers.filter((value) => {
 //   return value > 50;
 // });
@@ -27,16 +27,16 @@ const filteredNumbers = numbers.filter((value) => value > 50);
 // console.log(filteredNumbers);
 
 // * EVERY
-// every method'u tüm elemanlar için condition sağlanıyorsa true döner.
-// eğer bir eleman dahi condition'ı sağlamazsa false döner.
+// Returns true if the given condition is satisfied by at all element.
+// returns false if the given condition is not satisfied by at least one element.
 const everyNumbers = numbers.every((number) => {
   return number > 2;
 });
 // console.log(everyNumbers);
 
 // * SOME
-// verilen condition'ı en az bir eleman sağlıyorsa true,
-// hiçbir eleman sağlamıyorsa false döndürür.
+// Returns true if the given condition is satisfied by at least one element,
+// returns false if no element satisfies it.
 const someNumbers1 = numbers.some((number) => {
   return number > 50;
 });
