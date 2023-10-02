@@ -3,24 +3,30 @@ function getData(url, callback) {
 
   request.addEventListener("readystatechange", () => {
     if (request.readyState === 4 && request.status === 200) {
-      // TODO: response alinacak.
-      const response = JSON.parse(request.responseText);
-      callback("Data cekildi.", response);
-      //console.log(request.status, "Data cekildi")
+      // TODO: response alınacak
+      const response = JSON.parse(request.responseText); // from string to JSON
+      // JASON.stingfy --> from JSON to string
+      callback("Data çekildi.", response);
     } else if (request.readyState === 4) {
-      // TODO: hata mesaji verilecek.
-      callback("Data cekilemedi");
+      // TODO: hata mesajı verilecek.
+      callback("Data çekilemedi.");
     }
-    console.log(request.readyState);
   });
 
   request.open("GET", url);
-  request.send;
+  request.send();
 }
 
 getData("https://jsonplaceholder.typicode.com/posts", (message, data) => {
   console.log(message);
   if (data) {
     console.log(data);
+
+    getData("https://jsonplaceholder.typicode.com/users", (message, data) => {
+      console.log(message);
+      if (data) {
+        console.log(data);
+      }
+    });
   }
 });
