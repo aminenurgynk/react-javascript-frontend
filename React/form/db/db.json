@@ -17,6 +17,24 @@
       "lastname": "Sertoğlu",
       "gender": "male",
       "id": 3
+    },
+    {
+      "firstname": "Mehmet Caner",
+      "lastname": "Öksüz",
+      "gender": "male",
+      "id": 4
+    },
+    {
+      "firstname": "Serkan Şahin",
+      "lastname": "Zorlu",
+      "gender": "male",
+      "id": 5
+    },
+    {
+      "firstname": "Aminenur",
+      "lastname": "Goynuk",
+      "gender": "female",
+      "id": 6
     }
   ],
   "book": [
@@ -33,6 +51,28 @@
     {
       "book": "İnsan Olmak",
       "author": "Engin Geçtan",
+      "id": 3
+    },
+    {
+      "book": "Alkoller",
+      "author": "Guillaume Apollinaire",
+      "id": 4
+    }
+  ],
+  "permission": [
+    {
+      "name": "user.tab.visible",
+      "value": true,
+      "id": 1
+    },
+    {
+      "name": "button.collapsed.visible",
+      "value": true,
+      "id": 2
+    },
+    {
+      "name": "user.form.visible",
+      "value": true,
       "id": 3
     }
   ]
