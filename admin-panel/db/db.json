@@ -1,0 +1,42 @@
+{
+  "user": [
+    {
+      "firstname": "Gizem",
+      "lastname": "Kuscuoglu",
+      "email": "gizo@metro.com",
+      "age": 24,
+      "address": "izmir ",
+      "id": 1
+    },
+    {
+      "firstname": "Salih",
+      "lastname": "Salih",
+      "email": "salih@Merto.com",
+      "age": 4,
+      "address": "koy sincan ve pursaklar",
+      "id": 2
+    }
+  ],
+  "role": [],
+  "permission": [
+    {
+      "name": "travel izni",
+      "id": 1
+    },
+    {
+      "name": "iyilik senden iyyiii",
+      "id": 2
+    }
+  ],
+  "task": [
+    {
+      "name": "lolo",
+      "id": 1
+    },
+    {
+      "name": "polyana",
+      "id": 2
+    }
+  ],
+  "flow": []
+}
