@@ -1,7 +1,7 @@
 import axios from "axios"
 import { permissionUrl } from "./apiUrl";
 
-export const getPermission= async()=>{
+export const getPermissions= async()=>{
     const response = await axios.get(permissionUrl);
     return response.data;
 };

@@ -17,15 +17,32 @@
       "id": 2
     }
   ],
-  "role": [],
+  "role": [
+    {
+      "name": "rol1",
+      "permission": [
+        3,
+        4
+      ],
+      "id": 1
+    }
+  ],
   "permission": [
     {
-      "name": "travel izni",
+      "name": "per1",
       "id": 1
     },
     {
-      "name": "iyilik senden iyyiii",
+      "name": "per2",
       "id": 2
+    },
+    {
+      "name": "per3",
+      "id": 3
+    },
+    {
+      "name": "per4",
+      "id": 4
     }
   ],
   "task": [

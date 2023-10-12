@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import {
   addPermission,
   deletePermission,
-  getPermission,
+  getPermissions,
   updatePermission,
 } from "../../services/permission";
 import { Button, Col, Row, Space, Table } from "antd";
@@ -83,7 +83,7 @@ const Permissions = () => {
   ];
 
   useEffect(() => {
-    getPermission().then((response) => {
+    getPermissions().then((response) => {
       setPermissions(response);
     });
   }, []);

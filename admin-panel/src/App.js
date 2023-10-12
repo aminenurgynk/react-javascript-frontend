@@ -14,7 +14,7 @@ function App() {
       theme={{
         algorithm: theme[isDark ? "darkAlgorithm" : "defaultAlgorithm"],
         token: {
-          colorPrimary: "#F16C16",
+          colorPrimary: "#ed9353",
         },
       }}
     >
