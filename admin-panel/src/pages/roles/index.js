@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { addRole, deleteRole, getRole, updateRole } from "../../services/role";
-import { Button, Col, Row, Space, Table, Tag, theme } from "antd";
-import { DeleteOutlined, EditOutlined, PlusOutlined } from "@ant-design/icons";
+import { Button, Col, Row, Space, Table, Tag, Tooltip, theme } from "antd";
+import { DeleteOutlined, EditOutlined, InfoCircleOutlined, PlusOutlined } from "@ant-design/icons";
 import "./index.scss";
 import RoleForm from "./form";
 import { getPermissions } from "../../services/permission";
@@ -53,18 +53,30 @@ const Roles = () => {
       title: "Name",
       dataIndex: "name",
       key: "r1",
+      render: (cell, row) => 
+      <Space>
+      {cell}
+      <Tooltip title={row.description} placement="right">
+        <InfoCircleOutlined />
+      </Tooltip>
+      </Space>
+      
     },
     {
       title: "Permissions",
       dataIndex: "permission",
       key: "r2",
-      render: (cell) => (
-        <Space>
-          {cell?.map((id) => (
-            <Tag key={id} color={colorPrimary}>{permissions.find((p) => p.value === id).label}</Tag>
-          ))}
-        </Space>
-      ),
+      render: (cell) => {
+        return (
+          <Space>
+            {cell?.map((id) => (
+              <Tag key={id} color={colorPrimary}>
+                {permissions.find((p) => p.value === id)?.label}
+              </Tag>
+            ))}
+          </Space>
+        );
+      },
     },
     {
       title: "Action",
