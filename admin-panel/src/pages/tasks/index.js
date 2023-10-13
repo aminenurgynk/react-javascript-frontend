@@ -49,7 +49,7 @@ const Tasks = () => {
 
   const columns = [
     {
-      title: "Task Name",
+      title: "Name",
       dataIndex: "name",
       key: "t1",
     },

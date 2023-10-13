@@ -1,6 +1,9 @@
+import { useState } from "react";
+
 import { ConfigProvider, theme } from "antd";
 import MainPage from "./pages";
-import { useState } from "react";
+
+import { PermissionProvider } from "./context/PermissionContext";
 
 function App() {
   const [isDark, setIsDark] = useState(false);
@@ -10,16 +13,18 @@ function App() {
   };
 
   return (
-    <ConfigProvider
-      theme={{
-        algorithm: theme[isDark ? "darkAlgorithm" : "defaultAlgorithm"],
-        token: {
-          colorPrimary: "#ed9353",
-        },
-      }}
-    >
-      <MainPage onChangeTheme={onChangeTheme} />
-    </ConfigProvider>
+    <PermissionProvider>
+      <ConfigProvider
+        theme={{
+          algorithm: theme[isDark ? "darkAlgorithm" : "defaultAlgorithm"],
+          token: {
+            colorPrimary: "#ed9352",
+          },
+        }}
+      >
+        <MainPage onChangeTheme={onChangeTheme} />
+      </ConfigProvider>
+    </PermissionProvider>
   );
 }
 

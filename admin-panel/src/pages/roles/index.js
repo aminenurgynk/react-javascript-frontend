@@ -1,25 +1,33 @@
 import React, { useState, useEffect } from "react";
-import { addRole, deleteRole, getRole, updateRole } from "../../services/role";
+
 import { Button, Col, Row, Space, Table, Tag, Tooltip, theme } from "antd";
-import { DeleteOutlined, EditOutlined, InfoCircleOutlined, PlusOutlined } from "@ant-design/icons";
-import "./index.scss";
 import RoleForm from "./form";
+
+import { addRole, deleteRole, getRoles, updateRole } from "../../services/role";
 import { getPermissions } from "../../services/permission";
+
+import {
+  DeleteOutlined,
+  EditOutlined,
+  InfoCircleTwoTone,
+  PlusOutlined,
+} from "@ant-design/icons";
+import "./index.scss";
 
 const Roles = () => {
   const [roles, setRoles] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingRole, setEditingRoles] = useState();
   const [permissions, setPermissions] = useState([]);
-
   const {
-    token: { colorPrimary },
+    token: { colorPrimary, colorPrimaryActive },
   } = theme.useToken();
 
   const onCancel = () => {
     setIsModalOpen(false);
   };
   const onClickAddRole = () => {
+    setEditingRoles();
     setIsModalOpen(true);
   };
 
@@ -43,8 +51,8 @@ const Roles = () => {
       setRoles((prevState) => prevState.filter((t) => t.id !== id));
     });
   };
-  const onEdit = (roles) => {
-    setEditingRoles(roles);
+  const onEdit = (permissons) => {
+    setEditingRoles(permissons);
     setIsModalOpen(true);
   };
 
@@ -53,18 +61,18 @@ const Roles = () => {
       title: "Name",
       dataIndex: "name",
       key: "r1",
-      render: (cell, row) => 
-      <Space>
-      {cell}
-      <Tooltip title={row.description} placement="right">
-        <InfoCircleOutlined />
-      </Tooltip>
-      </Space>
-      
+      render: (cell, row) => (
+        <Space>
+          {cell}
+          <Tooltip title={row.description} placement="right">
+            <InfoCircleTwoTone twoToneColor={colorPrimaryActive} />
+          </Tooltip>
+        </Space>
+      ),
     },
     {
       title: "Permissions",
-      dataIndex: "permission",
+      dataIndex: "permissions",
       key: "r2",
       render: (cell) => {
         return (
@@ -81,7 +89,7 @@ const Roles = () => {
     {
       title: "Action",
       dataIndex: "id",
-      key: "p2",
+      key: "r3",
       width: "100px",
       render: (cell, row) => (
         <Space>
@@ -106,7 +114,7 @@ const Roles = () => {
   ];
 
   useEffect(() => {
-    getRole().then((response) => {
+    getRoles().then((response) => {
       setRoles(response);
     });
     getPermissions().then((response) => {

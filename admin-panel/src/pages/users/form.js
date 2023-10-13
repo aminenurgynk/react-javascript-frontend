@@ -1,11 +1,21 @@
-import { Button, Form, Input, InputNumber, Modal } from "antd";
+import { Button, Form, Input, InputNumber, Modal, Select } from "antd";
 
-const UserForm = ({ isModalOpen, onCancel, onFinish, initialValues }) => {
-  return <Modal title="User" open={isModalOpen} onCancel={onCancel}
-  
-  cancelButtonProps={{style:{display:"none"}}}
-  okButtonProps ={{style:{display:"none"}}}>
-    <Form
+const UserForm = ({
+  isModalOpen,
+  onCancel,
+  onFinish,
+  initialValues,
+  roles,
+}) => {
+  return (
+    <Modal
+      title="User"
+      open={isModalOpen}
+      onCancel={onCancel}
+      okButtonProps={{ style: { display: "none" } }}
+      cancelButtonProps={{ style: { display: "none" } }}
+    >
+      <Form
         name="user"
         labelCol={{
           span: 8,
@@ -87,6 +97,19 @@ const UserForm = ({ isModalOpen, onCancel, onFinish, initialValues }) => {
         </Form.Item>
 
         <Form.Item
+          label="Roles"
+          name="roles"
+          rules={[
+            {
+              required: true,
+              message: "Please select!",
+            },
+          ]}
+        >
+          <Select mode="tags" options={roles} />
+        </Form.Item>
+
+        <Form.Item
           wrapperCol={{
             offset: 8,
             span: 16,
@@ -97,7 +120,8 @@ const UserForm = ({ isModalOpen, onCancel, onFinish, initialValues }) => {
           </Button>
         </Form.Item>
       </Form>
-  </Modal>;
+    </Modal>
+  );
 };
 
 export default UserForm;

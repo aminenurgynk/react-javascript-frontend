@@ -1,17 +1,22 @@
 import { useEffect, useState } from "react";
 
-import { Button, Col, Row, Space, Table } from "antd";
+import { Button, Col, Row, Space, Table, Tag, Typography, theme } from "antd";
+import UserForm from "./form";
 
 import { addUser, deleteUser, getUsers, updateUser } from "../../services/user";
+import { getRoles } from "../../services/role";
 
 import { DeleteOutlined, EditOutlined, PlusOutlined } from "@ant-design/icons";
 import "./index.scss";
-import UserForm from "./form";
 
 const Users = () => {
   const [users, setUsers] = useState([]);
+  const [roles, setRoles] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingUser, setEditingUser] = useState();
+  const {
+    token: { colorPrimary, colorTextLightSolid },
+  } = theme.useToken();
 
   const onCancel = () => {
     setIsModalOpen(false);
@@ -66,14 +71,37 @@ const Users = () => {
       key: "us4",
     },
     {
+      title: "Roles",
+      dataIndex: "roles",
+      key: "us5",
+      width: "25%",
+      render: (cell) => {
+        return (
+          <Space wrap={true}>
+            {cell?.map((id) => (
+              <Tag key={id} color={colorPrimary}>
+                <Typography.Text
+                  style={{ maxWidth: 100, color: colorTextLightSolid }}
+                  ellipsis={true}
+                >
+                  {roles.find((r) => r.value === id)?.label}
+                </Typography.Text>
+              </Tag>
+            ))}
+          </Space>
+        );
+      },
+    },
+    {
       title: "Address",
       dataIndex: "address",
-      key: "us5",
+      key: "us6",
     },
     {
       title: "Action",
       dataIndex: "id",
-      key: "us6",
+      key: "us7",
+      width: "100px",
       render: (cell, row) => (
         <Space>
           <Button
@@ -100,6 +128,14 @@ const Users = () => {
     getUsers().then((response) => {
       setUsers(response);
     });
+    getRoles().then((response) => {
+      setRoles(
+        response.map((r) => ({
+          value: r.id,
+          label: r.name,
+        }))
+      );
+    });
   }, []);
 
   return (
@@ -123,6 +159,7 @@ const Users = () => {
           onCancel={onCancel}
           onFinish={onFinish}
           initialValues={editingUser}
+          roles={roles}
         />
       )}
     </Space>

@@ -51,7 +51,7 @@ const Permissions = () => {
 
   const columns = [
     {
-      title: "Permission Name",
+      title: "Name",
       dataIndex: "name",
       key: "p1",
     },

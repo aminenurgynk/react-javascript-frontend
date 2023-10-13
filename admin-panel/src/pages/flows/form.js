@@ -1,22 +1,16 @@
 import { Button, Form, Input, Modal, Select } from "antd";
 
-const RoleForm = ({
-  isModalOpen,
-  onCancel,
-  initialValues,
-  onFinish,
-  permissions,
-}) => {
+const FlowForm = ({ isModalOpen, onCancel, initialValues, onFinish, tasks }) => {
   return (
     <Modal
-      title="Role"
+      title="Flows"
       open={isModalOpen}
       onCancel={onCancel}
       cancelButtonProps={{ style: { display: "none" } }}
       okButtonProps={{ style: { display: "none" } }}
     >
       <Form
-        name="role"
+        name="flows"
         labelCol={{
           span: 8,
         }}
@@ -28,25 +22,21 @@ const RoleForm = ({
         autoComplete="off"
       >
         <Form.Item
-          label="Role Name"
-          name="name"
+          label="Flow Name"
+          name="flow name"
           rules={[
             {
               required: true,
-              message: "Please input the name!",
+              message: "Please input the flow name!",
             },
           ]}
         >
           <Input />
         </Form.Item>
 
-        <Form.Item label="Description" name="description">
-          <Input.TextArea />
-        </Form.Item>
-
         <Form.Item
-          label="Permissions"
-          name="permissions"
+          label="Tasks"
+          name="tasks"
           rules={[
             {
               required: true,
@@ -54,7 +44,7 @@ const RoleForm = ({
             },
           ]}
         >
-          <Select mode="tags" options={permissions} />
+          <Select mode="tags" options={tasks} />
         </Form.Item>
 
         <Form.Item
@@ -72,4 +62,4 @@ const RoleForm = ({
   );
 };
 
-export default RoleForm;
+export default FlowForm;

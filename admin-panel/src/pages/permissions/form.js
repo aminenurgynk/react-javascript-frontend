@@ -22,7 +22,7 @@ const PermissionForm = ({ isModalOpen, onCancel, initialValues, onFinish }) => {
         autoComplete="off"
       >
         <Form.Item
-          label="Name"
+          label="Permission Name"
           name="name"
           rules={[
             {

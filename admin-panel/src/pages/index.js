@@ -1,24 +1,30 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 
 import MainLayout from "../components/MainLayout";
-
 import Dashboard from "./dashboard";
-import Flows from "./flows";
-import Permissions from "./permissions";
-import Tasks from "./tasks";
 import Users from "./users";
 import Roles from "./roles";
+import Permissions from "./permissions";
+import Tasks from "./tasks";
+import Flows from "./flows";
+import Settings from "./settings";
 
 import {
   CarryOutOutlined,
   PieChartOutlined,
+  SettingOutlined,
   SkinOutlined,
   SlidersOutlined,
   UnorderedListOutlined,
   UserOutlined,
 } from "@ant-design/icons";
+import { useContext, useEffect } from "react";
+import { getPermissionsByDefaultUser } from "../services/permission";
+import PermissionContext from "../context/PermissionContext";
 
 const MainPage = ({ onChangeTheme }) => {
+  const { setPermissions } = useContext(PermissionContext);
+
   const menu = [
     {
       key: "m1",
@@ -28,17 +34,17 @@ const MainPage = ({ onChangeTheme }) => {
     {
       key: "m2",
       icon: <UserOutlined />,
-      label: <Link to="/user">Users</Link>,
+      label: <Link to="/user">User</Link>,
     },
     {
       key: "m3",
       icon: <SkinOutlined />,
-      label: <Link to="/role">Roles</Link>,
+      label: <Link to="/role">Role</Link>,
     },
     {
       key: "m4",
       icon: <UnorderedListOutlined />,
-      label: <Link to="/permission">Permissions</Link>,
+      label: <Link to="/permission">Permission</Link>,
     },
     {
       key: "m5",
@@ -50,7 +56,19 @@ const MainPage = ({ onChangeTheme }) => {
       icon: <CarryOutOutlined />,
       label: <Link to="/flow">Flows</Link>,
     },
+    {
+      key: "m7",
+      icon: <SettingOutlined />,
+      label: <Link to="/settings">Settings</Link>,
+    },
   ];
+
+  useEffect(() => {
+    getPermissionsByDefaultUser().then((permissions) => {
+      setPermissions(permissions);
+      localStorage.setItem("permissions", permissions);
+    });
+  }, []);
 
   return (
     <BrowserRouter>
@@ -62,6 +80,7 @@ const MainPage = ({ onChangeTheme }) => {
           <Route path="/permission" element={<Permissions />} />
           <Route path="/task" element={<Tasks />} />
           <Route path="/flow" element={<Flows />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </MainLayout>
     </BrowserRouter>
