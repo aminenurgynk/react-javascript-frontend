@@ -14,14 +14,6 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npx json-server -w db.json -p 4000`
-
-To run json-server
-
-### `npx json-server -w settings.json -p 4001`
-
-To run json-server
-
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
